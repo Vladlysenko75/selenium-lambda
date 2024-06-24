@@ -42,7 +42,7 @@ def initialise_driver():
 
 def lambda_handler(event, context):
     driver = initialise_driver()
-    driver.get("https://wbyte.dev")
+    driver.get("https://www.google.com/")
     logger.info(f"Page title: ${driver.title}")
 
     body = {
