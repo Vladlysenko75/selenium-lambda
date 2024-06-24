@@ -5,10 +5,10 @@ on:
     branches: ["main"]
 env:
   CDK_VERSION: "2.126.0"
-  AWS_ACCOUNT_ID: ${{ secrets.AWS_ACCOUNT_ID }}
-  AWS_REGION: ${{ secrets.AWS_REGION }}
-  API_KEY: ${{ secrets.API_KEY }}  
-  APPLICATION_TAG: ${{ vars.APPLICATION_TAG }}
+  AWS_ACCOUNT_ID: "267104850766"
+  AWS_REGION: "us-east-1"
+  API_KEY: "gfdgsdfgdfsbffv345sdfsdf" 
+  APPLICATION_TAG: "selenium"
   APPLICATION_NAME: "selenium-lambda"
 
 permissions:
@@ -30,7 +30,7 @@ jobs:
         with:
           role-to-assume: ${{ secrets.AWS_ASSUME_ROLE_ARN }}
           role-session-name: github-action-role
-          aws-region: ${{ secrets.AWS_REGION }}
+          aws-region: "us-east-1"
 
       - name: Bootstrap
         run: |
