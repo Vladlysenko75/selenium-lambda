@@ -36,6 +36,9 @@ jobs:
         run: |
           . _CI/bootstrap.sh
 
+      - name: Bootstrap CDK Environment
+        run: npx cdk bootstrap --cloudformation-execution-policies arn:aws:iam::aws:policy/AdministratorAccess aws://267104850766/us-east-1
+
       - name: Deploy
         run: |
           . _CI/deploy.sh
